@@ -1,0 +1,11 @@
+type Query {
+    findAuthor(email: String): Author
+    findBook(isbn: String): Book
+    findAllBooks: [Book]!
+}
+
+type Mutation {
+    createBook(book: BookInput!, email: String!): Book
+    deleteBook(isbn: String): Boolean
+    createAuthor(author: AuthorInput): Author
+}
